@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | Interactive rating component</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
     <div id="feedback-container">
       <div id="star">
-        <img src="images/icon-star.svg" alt="star">
+        <img src="icon-star.svg" alt="star" />
       </div>
       <main>
         <h2>How did we do?</h2>
         <p>
-          Please let us know how we did with your support request. All feedback is appreciated 
-          to help us improve our offering!
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
         </p>
-        <span class="rating">1</span>
-        <span class="rating">2</span>
-        <span class="rating">3</span>
-        <span class="rating">4</span>
-        <span class="rating">5</span>
+        <button type="submit" class="rating" id="rating1" onclick="selectRating(1)">1</button>
+        <button type="submit" class="rating" id="rating2" onclick="selectRating(2)">2</button>
+        <button type="submit" class="rating" id="rating3" onclick="selectRating(3)">3</button>
+        <button type="submit" class="rating" id="rating4" onclick="selectRating(4)">4</button>
+        <button type="submit" class="rating" id="rating5" onclick="selectRating(5)">5</button>
       </main>
       <footer>
-        <a href="thank_you.html">Submit</a>
+        <button type="submit" onclick="submitRating()">Submit</button>
       </footer>
     </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
