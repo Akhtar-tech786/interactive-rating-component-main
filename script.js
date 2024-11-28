@@ -1,4 +1,6 @@
 let selectedRating = null;
+const ratingSection = document.querySelector('#rating-section');
+const thankYouSection = document.querySelector('#thank-you-section');
 
 function selectRating(rating) {
   if (selectedRating == rating) {
@@ -28,7 +30,8 @@ function submitRating() {
     alert("Please select a rating before submitting.");
     return;
   } else {
-    document.getElementById("rate").innerHTML = selectedRating;
-    window.location.href = "thank_you.html";
+      document.getElementById("selects").innerHTML = `You selected ${selectedRating} out of 5`;
+      ratingSection.style.display = 'none'; // Hide the rating section
+      thankYouSection.style.display = 'block'; // Show the thank you section
   }
 }
